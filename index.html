@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICCT ChatBot - Login/Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="backgrounds/bgvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container" id="login-page">
+        <div class="header">Login to EduChat</div>
+        <div class="form-box">
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <div class="toggle">
+                Don't have an account? <a href="javascript:void(0);" onclick="showSignUp()">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="signup-page" style="display: none;">
+        <div class="header">Sign up to EduChat</div>
+        <div class="form-box">
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signup()">Sign up</button>
+            <div class="toggle">
+                Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="chatbot-page" style="display: none;">
+        <div class="header">EduChat</div>
+        <div class="chat-wrapper">
+            <div id="chat-box">Welcome to the EduChat!</div>
+            <div class="input-wrapper">
+                <input type="text" id="chat-input" placeholder="Type your message here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
